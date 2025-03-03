@@ -1,6 +1,6 @@
 {
 	"name": "@webwriter/chemdraw",
-	"version": "2.0.2",
+	"version": "2.0.7",
 	"description": "Periodic table of the elements. Each element can be focused on to get a brief overview of its properties.",
 	"keywords": [
 		"webwriter-widget"
