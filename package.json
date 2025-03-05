@@ -1,31 +1,38 @@
 {
-	"name": "@webwriter/chemdraw",
-	"version": "2.0.7",
-	"description": "Periodic table of the elements. Each element can be focused on to get a brief overview of its properties.",
-	"keywords": [
-		"webwriter-widget"
-	],
-	"license": "MIT",
-	"author": "Raphael Thelen <raphael.thelen@rwth-aachen.de>",
-	"scripts": {
-		"prepublishOnly": "npx @webwriter/build"
-	},
-	"dependencies": {
-		"@shoelace-style/shoelace": "^2.15.0",
-		"@webwriter/lit": "^2.0.0",
-		"lit": "^3.1.3"
-	},
-	"devDependencies": {
-		"typescript": ">=4.8.4 <5.0.0-0",
-		"vite": ">=3.1.6 <4.0.0-0"
-	},
-	"type": "module",
-	"exports": {
-		"./widgets/webwriter-periodic-table.*": {
-			"source": "./components/PeriodicTable.ts",
-			"default": "./dist/widgets/webwriter-periodic-table.*"
-		},
-		"./package.json": "./package.json",
-		"./icon": "./icon.svg"
-	}
+    "name": "@webwriter/chemdraw",
+    "version": "2.0.8",
+    "description": "Periodic table of the elements. Each element can be focused on to get a brief overview of its properties.",
+    "keywords": [
+        "webwriter-widget",
+        "widget-lang-en",
+        "iscedf2013-05",
+        "isced2011-2",
+        "isced2011-3",
+        "chemistry",
+        "periodic table",
+        "elements"
+    ],
+    "license": "MIT",
+    "author": "Raphael Thelen <raphael.thelen@rwth-aachen.de>",
+    "scripts": {
+        "prepublishOnly": "npx @webwriter/build"
+    },
+    "dependencies": {
+        "@shoelace-style/shoelace": "^2.15.0",
+        "@webwriter/lit": "^2.0.0",
+        "lit": "^3.1.3"
+    },
+    "devDependencies": {
+        "typescript": ">=4.8.4 <5.0.0-0",
+        "vite": ">=3.1.6 <4.0.0-0"
+    },
+    "type": "module",
+    "exports": {
+        "./widgets/webwriter-periodic-table.*": {
+            "source": "./components/PeriodicTable.ts",
+            "default": "./dist/widgets/webwriter-periodic-table.*"
+        },
+        "./package.json": "./package.json",
+        "./icon": "./icon.svg"
+    }
 }
