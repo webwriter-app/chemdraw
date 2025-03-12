@@ -1,13 +1,18 @@
 {
     "name": "@webwriter/chemdraw",
-    "version": "2.0.9",
+    "version": "2.1.0",
     "description": "Periodic table of the elements. Each element can be focused on to get a brief overview of its properties.",
     "keywords": [
         "webwriter-widget",
+        "widget-informational",
         "widget-lang-en",
         "iscedf2013-05",
         "isced2011-2",
         "isced2011-3",
+        "isced2011-5",
+        "isced2011-6",
+        "isced2011-7",
+        "isced2011-8",
         "chemistry",
         "periodic table",
         "elements"
