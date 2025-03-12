@@ -1,6 +1,6 @@
 {
     "name": "@webwriter/chemdraw",
-    "version": "2.0.8",
+    "version": "2.0.9",
     "description": "Periodic table of the elements. Each element can be focused on to get a brief overview of its properties.",
     "keywords": [
         "webwriter-widget",
@@ -34,5 +34,12 @@
         },
         "./package.json": "./package.json",
         "./icon": "./icon.svg"
+    },
+    "editingConfig": {
+        ".": {
+            "description": {
+                "de": "Periodensystem der Elemente. Jedes Element kann ausgewählt werden, um einen kurzen Überblick über seine Eigenschaften zu erhalten."
+            }
+        }
     }
 }
