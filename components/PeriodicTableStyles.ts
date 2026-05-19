@@ -9,6 +9,7 @@ export const PeriodicTableStyles = css`
         /* padding: 0.5rem; */
 
         width: 100%;
+        overflow-x: auto;
 
         font-size: 0.7em;
     }
