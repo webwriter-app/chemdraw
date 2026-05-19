@@ -25,7 +25,7 @@ export const PeriodicTableStyles = css`
     }
 
     .element:hover {
-        background-color: lightgray;
+        filter: brightness(0.85);
         cursor: pointer;
     }
 
@@ -122,7 +122,7 @@ export const PeriodicTableStyles = css`
         background-color: lightblue;
     }
 
-    .nobel.gas {
+    .noble.gas {
         background-color: lightgreen;
     }
 
