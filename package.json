@@ -1,6 +1,6 @@
 {
   "name": "@webwriter/chemdraw",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Periodic table of the elements. Each element can be focused on to get a brief overview of its properties.",
   "keywords": [
     "webwriter-widget",
@@ -50,6 +50,7 @@
   ],
   "license": "MIT",
   "author": "Raphael Thelen <raphael.thelen@rwth-aachen.de>",
+  "repository": "github:webwriter-app/chemical-formula",
   "scripts": {
     "prepublishOnly": "npx @webwriter/build"
   },

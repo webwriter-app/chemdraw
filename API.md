@@ -1,5 +1,5 @@
-# Chemdraw (`@webwriter/chemdraw@2.1.0`)
-[License: MIT](LICENSE) | Version: 2.1.0
+# Chemdraw (`@webwriter/chemdraw@2.1.1`)
+[License: MIT](LICENSE) | Version: 2.1.1
 
 Periodic table of the elements. Each element can be focused on to get a brief overview of its properties.
 
