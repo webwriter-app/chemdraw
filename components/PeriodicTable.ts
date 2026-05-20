@@ -8,57 +8,15 @@ import { PeriodicTableStyles } from './PeriodicTableStyles';
 
 export interface Element {
     name: string;
-    appearance: null | string;
     atomic_mass: number;
-    boil: number | null;
     category: string;
-    density: number | null;
-    discovered_by: null | string;
-    melt: number | null;
-    molar_heat: number | null;
-    named_by: null | string;
     number: number;
-    period: number;
-    group: number;
-    phase: Phase;
-    source: string;
-    bohr_model_image: null | string;
-    bohr_model_3d: null | string;
-    spectral_img: null | string;
-    summary: string;
     symbol: string;
     xpos: number;
     ypos: number;
-    wxpos: number;
-    wypos: number;
-    shells: number[];
-    electron_configuration: string;
     electron_configuration_semantic: string;
-    electron_affinity: number | null;
     electronegativity_pauling: number | null;
     ionization_energies: number[];
-    'cpk-hex': null | string;
-    image: Image;
-    block: Block;
-}
-
-export enum Block {
-    D = 'd',
-    F = 'f',
-    P = 'p',
-    S = 's',
-}
-
-export interface Image {
-    title: string;
-    url: string;
-    attribution: string;
-}
-
-export enum Phase {
-    Gas = 'Gas',
-    Liquid = 'Liquid',
-    Solid = 'Solid',
 }
 
 @customElement('webwriter-periodic-table')
