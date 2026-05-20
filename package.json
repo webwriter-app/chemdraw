@@ -1,50 +1,83 @@
 {
-    "name": "@webwriter/chemdraw",
-    "version": "2.1.0",
-    "description": "Periodic table of the elements. Each element can be focused on to get a brief overview of its properties.",
-    "keywords": [
-        "webwriter-widget",
-        "widget-informational",
-        "widget-lang-en",
-        "iscedf2013-05",
-        "isced2011-2",
-        "isced2011-3",
-        "isced2011-5",
-        "isced2011-6",
-        "isced2011-7",
-        "isced2011-8",
-        "chemistry",
-        "periodic table",
-        "elements"
-    ],
-    "license": "MIT",
-    "author": "Raphael Thelen <raphael.thelen@rwth-aachen.de>",
-    "scripts": {
-        "prepublishOnly": "npx @webwriter/build"
+  "name": "@webwriter/chemdraw",
+  "version": "2.1.0",
+  "description": "Periodic table of the elements. Each element can be focused on to get a brief overview of its properties.",
+  "keywords": [
+    "webwriter-widget",
+    "widget-informational",
+    "widget-lang-en",
+    "iscedf2013-05",
+    "isced2011-2",
+    "isced2011-3",
+    "isced2011-5",
+    "isced2011-6",
+    "isced2011-7",
+    "isced2011-8",
+    "chemistry",
+    "periodic table",
+    "elements",
+    "widget-lang-de",
+    "widget-lang-ar",
+    "widget-lang-bg",
+    "widget-lang-cs",
+    "widget-lang-da",
+    "widget-lang-nl",
+    "widget-lang-et",
+    "widget-lang-fi",
+    "widget-lang-fr",
+    "widget-lang-el",
+    "widget-lang-hu",
+    "widget-lang-it",
+    "widget-lang-lv",
+    "widget-lang-lt",
+    "widget-lang-nb",
+    "widget-lang-pl",
+    "widget-lang-pt-PT",
+    "widget-lang-ro",
+    "widget-lang-ru",
+    "widget-lang-sk",
+    "widget-lang-sl",
+    "widget-lang-es",
+    "widget-lang-sv",
+    "widget-lang-tr",
+    "widget-lang-uk",
+    "widget-lang-pt-BR",
+    "widget-lang-ko",
+    "widget-lang-ja",
+    "widget-lang-id",
+    "widget-lang-zh-hans",
+    "widget-lang-zh-hant"
+  ],
+  "license": "MIT",
+  "author": "Raphael Thelen <raphael.thelen@rwth-aachen.de>",
+  "scripts": {
+    "prepublishOnly": "npx @webwriter/build"
+  },
+  "dependencies": {
+    "@shoelace-style/shoelace": "^2.15.0",
+    "@webwriter/lit": "^2.0.0",
+    "lit": "^3.1.3"
+  },
+  "devDependencies": {
+    "typescript": ">=4.8.4 <5.0.0-0",
+    "vite": ">=3.1.6 <4.0.0-0"
+  },
+  "type": "module",
+  "exports": {
+    "./widgets/webwriter-periodic-table.*": {
+      "source": "./components/PeriodicTable.ts",
+      "default": "./dist/widgets/webwriter-periodic-table.*"
     },
-    "dependencies": {
-        "@shoelace-style/shoelace": "^2.15.0",
-        "@webwriter/lit": "^2.0.0",
-        "lit": "^3.1.3"
-    },
-    "devDependencies": {
-        "typescript": ">=4.8.4 <5.0.0-0",
-        "vite": ">=3.1.6 <4.0.0-0"
-    },
-    "type": "module",
-    "exports": {
-        "./widgets/webwriter-periodic-table.*": {
-            "source": "./components/PeriodicTable.ts",
-            "default": "./dist/widgets/webwriter-periodic-table.*"
-        },
-        "./package.json": "./package.json",
-        "./icon": "./icon.svg"
-    },
-    "editingConfig": {
-        ".": {
-            "description": {
-                "de": "Periodensystem der Elemente. Jedes Element kann ausgewählt werden, um einen kurzen Überblick über seine Eigenschaften zu erhalten."
-            }
-        }
+    "./package.json": "./package.json",
+    "./icon": "./icon.svg",
+    "./custom-elements.json": "./custom-elements.json"
+  },
+  "editingConfig": {
+    ".": {
+      "description": {
+        "de": "Periodensystem der Elemente. Jedes Element kann ausgewählt werden, um einen kurzen Überblick über seine Eigenschaften zu erhalten."
+      }
     }
+  },
+  "customElements": "custom-elements.json"
 }

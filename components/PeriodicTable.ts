@@ -1,5 +1,5 @@
 import { LitElementWw } from '@webwriter/lit';
-import { LitElement, PropertyValueMap, TemplateResult, html } from 'lit';
+import { LitElement, TemplateResult, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
 import periodicTable from '../periodicTable.json';
@@ -23,11 +23,14 @@ export interface Element {
 @customElement('webwriter-periodic-table')
 export class PeriodicTable extends LitElementWw {
     static styles = PeriodicTableStyles;
+    /** @internal */
     static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
+    /** The element object of the selected element */
     @property({ type: Object, attribute: true, reflect: true })
-    private accessor selectedElement: Element = periodicTable.elements[0] as Element;
+    accessor selectedElement: Element = periodicTable.elements[0] as Element;
 
+    /** @internal */
     focus() {
         console.log('focus');
         this.dispatchEvent(new CustomEvent('focus'));

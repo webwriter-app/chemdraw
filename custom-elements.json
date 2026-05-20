@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "components/PeriodicTable.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PeriodicTable",
+          "members": [
+            {
+              "kind": "field",
+              "name": "selectedElement",
+              "type": {
+                "text": "Element"
+              },
+              "default": "periodicTable.elements[0]",
+              "description": "The element object of the selected element",
+              "attribute": "selectedElement",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "formatElectronConfiguration",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "TemplateResult"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "configuration",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getLocalizedName",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "string"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "number",
+                  "type": {
+                    "text": "number"
+                  }
+                },
+                {
+                  "name": "enName",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ]
+            }
+          ],
+          "events": [
+            {
+              "name": "focus",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "selectedElement",
+              "type": {
+                "text": "Element"
+              },
+              "default": "periodicTable.elements[0]",
+              "description": "The element object of the selected element",
+              "fieldName": "selectedElement"
+            }
+          ],
+          "superclass": {
+            "name": "LitElementWw",
+            "package": "@webwriter/lit"
+          },
+          "tagName": "webwriter-periodic-table",
+          "customElement": true,
+          "modulePath": "components/PeriodicTable.ts",
+          "definitionPath": "components/PeriodicTable.ts"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "PeriodicTable",
+          "declaration": {
+            "name": "PeriodicTable",
+            "module": "components/PeriodicTable.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "webwriter-periodic-table",
+          "declaration": {
+            "name": "PeriodicTable",
+            "module": "components/PeriodicTable.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
