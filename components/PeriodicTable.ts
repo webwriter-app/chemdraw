@@ -3,6 +3,7 @@ import { LitElement, PropertyValueMap, TemplateResult, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
 import periodicTable from '../periodicTable.json';
+import elementsLocalized from '../elementsLocalized.json';
 
 import { PeriodicTableStyles } from './PeriodicTableStyles';
 
@@ -38,7 +39,7 @@ export class PeriodicTable extends LitElementWw {
                 <div class="selected-element" style="grid-column: 5/8; grid-row: 1/4;">
                     <div class="element-number">${this.selectedElement.number}</div>
                     <div class="element-symbol">${this.selectedElement.symbol}</div>
-                    <div class="element-name">${this.selectedElement.name}</div>
+                    <div class="element-name">${this.getLocalizedName(this.selectedElement.number, this.selectedElement.name)}</div>
                     <div class="element-mass">${this.selectedElement.atomic_mass.toFixed(3)}</div>
                     <div class="element-electron-configuration">
                         ${this.formatElectronConfiguration(this.selectedElement.electron_configuration_semantic)}
@@ -86,5 +87,13 @@ export class PeriodicTable extends LitElementWw {
         });
 
         return html` ${brackets} ${config}`;
+    }
+
+    private getLocalizedName(number: number, enName: string): string {
+        if (this.lang in elementsLocalized) {
+            const localizedElement = (elementsLocalized as any)[this.lang][String(number)];
+            return localizedElement ?? enName;
+        }
+        return enName;
     }
 }
