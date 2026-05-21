@@ -50,7 +50,7 @@
   ],
   "license": "MIT",
   "author": "Raphael Thelen <raphael.thelen@rwth-aachen.de>",
-  "repository": "github:webwriter-app/chemical-formula",
+  "repository": "github:webwriter-app/chemdraw",
   "scripts": {
     "prepublishOnly": "npx @webwriter/build"
   },
