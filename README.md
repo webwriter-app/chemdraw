@@ -3,6 +3,8 @@
 
 Periodic table of the elements. Each element can be focused on to get a brief overview of its properties.
 
+The element names combine package translations, established terminology from [Wikidata](https://www.wikidata.org/wiki/Property:P1086), and localized forms of the [IUPAC names](https://iupac.org/what-we-do/periodic-table-of-elements/).
+
 
 
 
