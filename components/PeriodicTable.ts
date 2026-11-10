@@ -1,6 +1,6 @@
 import { LitElementWw } from '@webwriter/lit';
 import { LitElement, TemplateResult, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators.js';
 
 import periodicTable from '../periodicTable.json';
 import elementsLocalized from '../elementsLocalized.json';
@@ -27,7 +27,7 @@ export class PeriodicTable extends LitElementWw {
     static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
     /** The element object of the selected element */
-    @property({ type: Object, attribute: true, reflect: true })
+    @state()
     accessor selectedElement: Element = periodicTable.elements[0] as Element;
 
     /** @internal */
