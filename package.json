@@ -116,7 +116,16 @@
     "widget-lang-so",
     "widget-lang-ti",
     "widget-lang-sw",
-    "widget-lang-ha"
+    "widget-lang-ha",
+    "widget-lang-yue-Hans",
+    "widget-lang-yue-Hant",
+    "widget-lang-kmr",
+    "widget-lang-kmr-Latn",
+    "widget-lang-kmr-Arab",
+    "widget-lang-ckb",
+    "widget-lang-ckb-Arab",
+    "widget-lang-af-ZA",
+    "widget-lang-af-NA"
   ],
   "license": "MIT",
   "author": "Raphael Thelen <raphael.thelen@rwth-aachen.de>",
@@ -248,7 +257,16 @@
         "so": "Jadwalka curiyeyaasha. Dooro curiye si aad u aragto dulmar kooban oo sifooyinkiisa ah.",
         "ti": "ፔርዮዲክ ሰደቓ ባእታታት። ሓጺር መግለጺ ባህርያት ናይ ሓደ ባእታ ንምርኣይ ምረጾ።",
         "sw": "Jedwali la elementi. Chagua elementi ili kuona muhtasari wa sifa zake.",
-        "ha": "Teburin sinadarai. Zaɓi wani sinadari don ganin taƙaitaccen bayani game da halayensa."
+        "ha": "Teburin sinadarai. Zaɓi wani sinadari don ganin taƙaitaccen bayani game da halayensa.",
+        "yue-Hans": "元素周期表。拣一个元素就可以睇到佢嘅基本性质。",
+        "yue-Hant": "元素週期表。揀一個元素就可以睇到佢嘅基本性質。",
+        "kmr": "Tabloya periyodîk a hêmanan. Hêmanek hilbijêre da ku taybetmendiyên bingehîn bibînî.",
+        "kmr-Latn": "Tabloya periyodîk a hêmanan. Hêmanek hilbijêre da ku taybetmendiyên bingehîn bibînî.",
+        "kmr-Arab": "تابلۆیا پەریۆدیک ئا هێمانان. هێمانەک هلبژێرە دا کو تایبەتمەندیێن بنگەهین ببینی.",
+        "ckb": "خشتەی خولیی توخمەکان. توخمێک هەڵبژێرە بۆ بینینی تایبەتمەندییە سەرەتاییەکانی.",
+        "ckb-Arab": "خشتەی خولیی توخمەکان. توخمێک هەڵبژێرە بۆ بینینی تایبەتمەندییە سەرەتاییەکانی.",
+        "af-ZA": "Periodieke tabel van die elemente. Kies enige element om ’n kort oorsig van sy eienskappe te sien.",
+        "af-NA": "Periodieke tabel van die elemente. Kies enige element om ’n kort oorsig van sy eienskappe te sien."
       },
       "label": {
         "_": "Chemdraw",
@@ -353,7 +371,16 @@
         "so": "Chemdraw",
         "ti": "Chemdraw",
         "sw": "Chemdraw",
-        "ha": "Chemdraw"
+        "ha": "Chemdraw",
+        "yue-Hans": "Chemdraw",
+        "yue-Hant": "Chemdraw",
+        "kmr": "Chemdraw",
+        "kmr-Latn": "Chemdraw",
+        "kmr-Arab": "جهەمدراو",
+        "ckb": "Chemdraw",
+        "ckb-Arab": "Chemdraw",
+        "af-ZA": "Chemdraw",
+        "af-NA": "Chemdraw"
       }
     },
     "./widgets/webwriter-periodic-table": {
@@ -460,7 +487,16 @@
         "so": "Jadwalka curiyeyaasha",
         "ti": "ሰሌዳ ባእታታት",
         "sw": "Jedwali la elementi",
-        "ha": "Jadawalin sinadarai"
+        "ha": "Jadawalin sinadarai",
+        "yue-Hans": "元素周期表",
+        "yue-Hant": "元素週期表",
+        "kmr": "Tabloya Periyodîk",
+        "kmr-Latn": "Tabloya Periyodîk",
+        "kmr-Arab": "تابلۆیا پەریۆدیک",
+        "ckb": "خشتەی خولی",
+        "ckb-Arab": "خشتەی خولی",
+        "af-ZA": "Periodieke tabel",
+        "af-NA": "Periodieke tabel"
       }
     }
   },
