@@ -1,11 +1,26 @@
 import { LitElementWw } from '@webwriter/lit';
 import { LitElement, TemplateResult, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement, state } from 'lit/decorators.js';
 
 import periodicTable from '../periodicTable.json';
 import elementsLocalized from '../elementsLocalized.json';
 
 import { PeriodicTableStyles } from './PeriodicTableStyles';
+
+const elementNames = new Map(
+    Object.entries(elementsLocalized).map(([language, names]) =>
+        [language.toLowerCase(), names as Record<string, string>]),
+);
+const defaultLocales = new Map([
+    ['no', 'nb'],
+    ['pt', 'pt-pt'],
+    ['zh', 'zh-hans'],
+]);
+
+function ancestor(node: Node) {
+    const root = node.getRootNode();
+    return node.parentElement ?? (root instanceof ShadowRoot ? root.host : null);
+}
 
 export interface Element {
     name: string;
@@ -27,8 +42,37 @@ export class PeriodicTable extends LitElementWw {
     static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
     /** The element object of the selected element */
-    @property({ type: Object, attribute: true, reflect: true })
+    @state()
     accessor selectedElement: Element = periodicTable.elements[0] as Element;
+
+    static override properties = { lang: { attribute: false, noAccessor: true } };
+
+    override get lang() {
+        for (let node: Node | null = this; node; node = ancestor(node)) {
+            if (node instanceof HTMLElement && node.hasAttribute('lang')) {
+                return node.getAttribute('lang')!;
+            }
+        }
+        return '';
+    }
+
+    override set lang(value: string) {
+        this.setAttribute('lang', value);
+    }
+
+    private readonly languageObserver = new MutationObserver(() => this.requestUpdate());
+
+    override connectedCallback() {
+        super.connectedCallback();
+        for (let element: Node | null = this; element; element = ancestor(element)) {
+            this.languageObserver.observe(element, { attributes: true, attributeFilter: ['lang'] });
+        }
+    }
+
+    override disconnectedCallback() {
+        this.languageObserver.disconnect();
+        super.disconnectedCallback();
+    }
 
     /** @internal */
     focus() {
@@ -93,10 +137,20 @@ export class PeriodicTable extends LitElementWw {
     }
 
     private getLocalizedName(number: number, enName: string): string {
-        if (this.lang in elementsLocalized) {
-            const localizedElement = (elementsLocalized as any)[this.lang][String(number)];
-            return localizedElement ?? enName;
+        const tag = this.lang.trim().toLowerCase();
+        const language = tag.split('-')[0];
+        let locale = tag;
+        if (/^zh-/.test(tag) && !elementNames.has(tag)) {
+            try {
+                const script = new Intl.Locale(tag).maximize().script;
+                locale = script ? `zh-${script.toLowerCase()}` : tag;
+            } catch {
+                locale = tag;
+            }
         }
-        return enName;
+        return elementNames.get(locale)?.[number]
+            ?? elementNames.get(language)?.[number]
+            ?? elementNames.get(defaultLocales.get(language) ?? '')?.[number]
+            ?? enName;
     }
 }
